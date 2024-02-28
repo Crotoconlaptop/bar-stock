@@ -14,7 +14,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #f39c12; /* Dorado */
+    color: #bcbcbce4; /* Dorado */
 }
 
 .product {
@@ -32,7 +32,7 @@ input[type='number'] {
     border: 1px solid #ccc;
     border-radius: 3px;
     box-sizing: border-box;
-    background-color: #f39c12; /* Dorado */
+    background-color: #11ff00; /* Dorado */
     color: #ffffff; /* Texto blanco */
 }
 
@@ -41,7 +41,7 @@ button {
     margin: 0 auto; /* Centrar horizontalmente */
     padding: 10px 20px; /* Aumentar el espacio vertical para los botones */
     margin-top: 20px;
-    background-color: #f39c12; /* Dorado */
+    background-color: #ff8c00; /* Dorado */
     color: #ffffff; /* Texto blanco */
     border: none;
     border-radius: 5px;
@@ -50,7 +50,7 @@ button {
 }
 
 button:hover {
-    background-color: #d68910; /* Dorado más oscuro al pasar el cursor */
+    background-color: #2fff00; /* Dorado más oscuro al pasar el cursor */
 }
 
 @media (max-width: 768px) {
