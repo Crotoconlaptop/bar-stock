@@ -1,48 +1,78 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    margin-bottom: 50px;
     background-color: #1f1f1f; /* Fondo oscuro */
     color: #ffffff; /* Texto blanco */
+}
+
+h1 {
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
 }
 
-h1 {
-    text-align: center;
-    color: #bcbcbce4; /* Dorado */
+/* Estilos para los elementos fijos en la parte superior */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-bottom: 100px;
+    width: 100%;
+    background-color: white; /* Fondo oscuro */
+    color: black; /* Texto blanco */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1000; /* Asegura que estén por encima de otros elementos */
+    display: flex; /* Utilizar flexbox para alinear los elementos */
+    flex-direction: column; /* Apilar los elementos verticalmente */
+    justify-content: center; /* Alinear verticalmente los elementos */
+    align-items: center; /* Centrar horizontalmente los elementos */
 }
 
+
+
+
+/* Estilos para la lista de productos */
 .product {
     margin-bottom: 10px;
     padding: 10px;
     background-color: #363636; /* Gris oscuro */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
-    display: flex; /* Utilizamos flexbox para alinear los elementos */
-    justify-content: space-between; /* Alineamos los elementos alrededor de su espacio */
-    align-items: center; /* Centramos verticalmente los elementos */
 }
 
+/* Estilos para los inputs */
 input[type='number'] {
-    width: 60px; /* Ajustamos el ancho para dejar espacio entre los inputs y reducir 1px */
+    width: 60px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
     box-sizing: border-box;
     background-color: #ffffff; /* Dorado */
     color: #000000; /* Texto blanco */
+    margin-left: 10px; /* Espacio entre los inputs y el texto */
 }
 
-button {
-    display: block; /* Botones centrados */
-    margin: 0 auto; /* Centrar horizontalmente */
-    padding: 10px 20px; /* Aumentar el espacio vertical para los botones */
-    margin-top: 20px;
+/* Ajuste de margen superior para el contenido principal */
+#product-list {
+    margin-top: 60px; /* Evitar que se superponga con los elementos fijos */
+}
+
+/* Estilos para el botón de exportar */
+#export-btn, #resetValuesBtn {
+    display: block;
+    margin: 20px auto 0; /* Centrado horizontalmente con margen superior */
+    padding: 10px 20px;
     background-color: #f08400; /* Dorado */
     color: #ffffff; /* Texto blanco */
     border: none;
@@ -51,21 +81,33 @@ button {
     font-size: 16px;
 }
 
-button:hover {
+#export-btn:hover {
     background-color: #d68910; /* Dorado más oscuro al pasar el cursor */
 }
 
+/* Estilos responsivos */
 @media (max-width: 768px) {
+    h1 {
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
     .container {
         padding: 10px;
     }
   
     .product {
-        flex-direction: column; /* Cambiamos la dirección de los elementos a columna en pantallas más pequeñas */
+        flex-direction: column; /* Cambiar a disposición de columna en pantallas más pequeñas */
     }
 
     input[type='number'] {
-        margin-right: 0; /* Eliminamos el margen derecho para que los inputs estén centrados */
-        margin-bottom: 10px; /* Añadimos un margen inferior para separar los inputs */
+        margin-left: 0; /* Eliminar el margen izquierdo en pantallas pequeñas */
+        margin-bottom: 10px; /* Añadir margen inferior para separar los inputs */
+    }
+
+    /* Estilos adicionales para los elementos fijos en pantallas pequeñas */
+    .fixed-top {
+        padding: 10px; /* Reducir el padding en pantallas pequeñas */
     }
 }
