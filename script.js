@@ -15,6 +15,7 @@ const inventoryData = [
     "mirinda",
     "7up",
     "7up diet",
+    "7up can",
     "coke", 
     "coke diet",
     "ginger ale",
@@ -130,6 +131,12 @@ const inventoryData = [
     "sweetener",
     "tabasco",
     "white sugar logo",
+    "take away cup small",
+    "take away cup medium",
+    "take away cup big",
+    "take away cup big brown",
+    "take away rounded",
+    "take away square"
 ];
 
 // Función para crear la lista de productos con inputs
@@ -168,24 +175,6 @@ function createProductList() {
 
         productList.appendChild(productDiv);
     });
-}
-
-// Función para determinar si un producto debe tener inputs
-function shouldHaveInputs(product) {
-    const categoriesWithoutInputs = [
-        "WATER",
-        "SOFT-DRINKS",
-        "SPARKLING WINE",
-        "PUREE",
-        "LYRE'S",
-        "SYRUPS",
-        "MILK",
-        "TEA",
-        "COFFEE",
-        "GROCERY"
-    ];
-
-    return !categoriesWithoutInputs.includes(product);
 }
 
 
